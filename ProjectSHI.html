@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seann Mitchelson | Self-Hosted Infrastructure</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png"> 
+</head>
+<body>
+<header>
+    <div id="logo">
+        <a href="index.html" id="text-logo">Seann Mitchelson.</a>
+    </div>
+    <nav id="nav-links">
+        <a href="projectlists.html">Directory</a>
+        <a href="ProjectDPE.html">DPE</a>
+        <a href="ProjectSHI.html">Self-hosted Infrastructure</a>
+    </nav>
+</header>
+
+<main>
+    <span class="anchor-target" id="projects-anchor"></span>
+    <section id="Why">
+        <h2>Whats wrong with the cloud?</h2>
+        <div class="about-container">
+            <div class="about-text"> 
+                <p>
+                It is easier than ever to host almost everything digital in the 'cloud', this has given massive convenience and ease to everyday non-technical users and so whats the problem with this? Large tech companies are notorious for relaxed data privacy. Whilst they treat their own data privacy with careful security practices, customer data is a whole different ballgame. Often times hidden jargon in their Terms of Services permit them to sell and use customer data for tracking and advertisements, which they know of course nobody in their right mind is going to read pages and pages of legal lingo for every app they install, which leads to these companies collecting so much data, they know you better than you do.
+                </br></br>
+                And as they say: the cloud is just a fancy name for someone else's computer (or datacentre).
+                </br></br>
+                
+                Discuss Password managers running locally, basically cloud password managers are a huge target for hackers, large databases of password, a good solution to this is using a purely local offline password manager, i can only recommend keepassxc for desktop and keepassdx for mobile. However this does create an issue, of having to manually put the passwords on each devices, to solve this we are going to set up a password sync server, where synced data will be encrypted and will never be stored on the server, this gives us the highest amount of immunity to MitM attacks and makes it a far smaller and lets be honest harder target than these larger providers.
+                
+                We will also set up an obsidian Sync for notes.
+                </br></br>
+                Insert Photo of googles ToS with sneaky relaxed data agreement.
+                Get link showcasing current google lawsuit
+                </p>
+                <p>
+                some notable offenders are: Google, Mozilla.
+                Google is current in a law suit over customer data
+                
+                Its not hard to find cases where custoemrs using cloud storage check for a file that has been deleted by an admin at google, and there are many cases of accounts being fully banned for misunderstandings and things of zero ethical concern.
+                
+                Additionally there is a reason prices are quite cheap for cloud storage and many companies, meta, will store tonnes of data on you for free, they are not just 'doing you a favour', you are the product.
+                
+                Several problems we pose are trusting these companies with our data, we trust it is held securely and wont be published in their next databreach. We trust that they arent going to sell our data to their Silicon valley friends, and we trust that they are not going to manipulate us with this data, unfortunately we already know 2/3 of those things happen, and that its only a matter of time until the next data breach.
+                
+                So the big question why self-host?
+                
+                Simple.
+                
+                Control, Security, Responsibility.
+                
+                By self-hosting my own data, and syncing i hope to achieve further digital sovernty and responsibility over my data and I have documented my journey and process in doing so below, i can only hope anyone reading this page will take the initiative to follow through and do this on your own, you never know you might just learn something.
+
+                </p>
+
+            </div>
+            <div class="about-image">
+                <img src="" alt="Seann Mitchelson" class="professional-photo">
+            </div>
+        </div>
+    </section>
+
+<span class="anchor-target" id="projects-anchor"></span>
+    <section id="Hardware">
+        <h2>Prerequisites | Hardware and Setup</h2>
+        <div class="about-container">
+            <div class="about-text">
+            <p>
+            We are not going to need very powerful hardware to be honest. For syncing in particular any old computer will be more than enough for running sync servers, and for hosting storage, a large hardware will be good and enough space to upgrade in the future with NMVE / SATA SSDs or an additional HDD. Lastly, if you plan on creating another instance for running say jellyfin for hosting your own media (videos, images), you may want to consider a slightly better cpu with integrated graphics, alternatively you can pick up a really cheap gpu that will do the job, this is potentially needed for video encoding, however mostly wont be needed.
+            
+            Hardware Used:
+            <list>
+            <ln></ln>
+            </list>
+            </p>
+            </br></br>
+            <p>
+            Now that we have the hardware sorted we are going to need a Hypervisor to run our servers on. At the time of writing a solid opensource choice is Proxmox VE.
+            
+            To get started we are going to need to create a bootable drive with Proxmox on it, so go ahead and download the <a href="https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso">ISO</a> We will then need a USB with a few GB of Space, personally mines has 31GB, but you will not need this much. To create a bootable drive on windows we can use <a href="https://rufus.ie/en/">Rufus</a>. If you are on linux, like me, we will use usb-creator-gtk (get it via apt if it isnt installed). For both Rufus and Startup Disk, we select the installed ISO and the drive we want to write to. This will take a minute or so to finish up.
+            </p>
+            
+
+            </div>
+        </div>
+    </section>
+
+    <span class="anchor-target" id="projects-anchor"></span>
+    <section id="Storage">
+        <h2>Storage</h2>
+        <div class="about-container">
+            <div class="about-text">
+            
+            
+
+            </div>
+        </div>
+    </section>
+
+    <span class="anchor-target" id="projects-anchor"></span>
+    <section id="Password">
+        <h2>Password Sync</h2>
+        <div class="about-container">
+            <div class="about-text">
+
+            </div>
+        </div>
+    </section>
+
+    <span class="anchor-target" id="projects-anchor"></span>
+    <section id="Obsidian">
+        <h2>Obsidian Sync</h2>
+        <div class="about-container">
+            <div class="about-text">
+            
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<footer>
+    <a href="https://www.linkedin.com/in/seann-mitchelson" target="_blank">LinkedIn</a>
+    <p>career@seannmitchelson.online</p>
+    <p>&copy; 2026 Seann Mitchelson</p>
+</footer>
+</body>
+</html>
